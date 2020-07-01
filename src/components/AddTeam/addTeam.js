@@ -9,8 +9,10 @@ function AddTeam() {
 
     function addNewTeam(e) {
         e.preventDefault()
-        setTeams(prevTeams => [...prevTeams, {name: name, color: color}])
-    }
+        setTeams([...teams, {name: name, color: color}])
+        setColor('')
+        setName('')
+    }    
 
     return (
         <form onSubmit={addNewTeam}>
